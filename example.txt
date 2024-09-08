@@ -1,0 +1,24 @@
+-- feel free to copy & paste this code
+natural_entities.register_spawn("modname:spawnname", {
+
+    spawn_rate = 1.0,
+    -- 1/x seconds
+
+    min_y = 0,
+    -- minimum y entities can spawn at
+
+    max_y = 0,
+    -- maximum y entities can spawn at
+
+    entities = {
+        ["modname:entity"] = 1.0
+    },
+    -- float 0-1 how likely something is to spawn
+
+    check = function (position, entname) 
+        return true 
+    end
+    -- custom check function
+    -- returns true if entity can spawn at position
+
+})
